@@ -8,6 +8,7 @@ category: 'Redis'
 draft: false 
 ---
 
+[原文链接](https://redis.io/docs/latest/develop/get-started/document-database/)
 
 ### 前置知识
 
