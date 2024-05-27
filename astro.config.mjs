@@ -1,7 +1,7 @@
 import tailwind from "@astrojs/tailwind"
 import Compress from "astro-compress"
 import icon from "astro-icon"
-import { defineConfig } from "astro/config"
+import { defineConfig, passthroughImageService  } from "astro/config"
 import Color from "colorjs.io"
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import rehypeKatex from "rehype-katex"
@@ -120,5 +120,8 @@ export default defineConfig({
         },
       },
     },
+  },
+  image: {
+    service: passthroughImageService(),
   },
 })
