@@ -7,3 +7,20 @@ tags: ["Redis", "缓存", "数据库"]
 category: 'Redis'
 draft: false 
 ---
+
+
+### 基于 RedisTemplate 操作 String 类型
+
+存和取
+```java
+    @Resource
+    private StringRedisTemplate stringRedisTemplate;
+
+    @RequestMapping("/testString")
+    public void testString() {
+        String key = "key1";
+        stringRedisTemplate.opsForValue().set(key, "这是一段文字 666");
+        String value = stringRedisTemplate.opsForValue().get(key);
+        System.out.println("value = " + value);
+    }
+```
