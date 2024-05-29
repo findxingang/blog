@@ -8,6 +8,13 @@ category: 'Redis'
 draft: false 
 ---
 
+**Refrences**:
+
+[redis序列化及各种序列化情况划分](https://www.jb51.net/article/280606.htm)
+
+[Redis序列化存储及日期格式的问题处理](https://www.jb51.net/article/233220.htm)
+
+
 
 
 ### RedisConfig.java
