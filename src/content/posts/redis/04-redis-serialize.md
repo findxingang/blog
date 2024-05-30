@@ -96,7 +96,7 @@ public class RedisConfig {
 
 > 即没有 RedisConfig.java
 > <br>
-> 也可以完成 Java 对象的序列化和反序列化，但是从 Redis 可视化工具查看时不够友好
+> 也可以完成 Java 对象的序列化和反序列化，但是从 Redis 可视化工具查看时不适合人类阅读
 
 ```java
     /**
@@ -117,6 +117,9 @@ public class RedisConfig {
 ```
 
 **注意**：`User` 类需要实现 `Serializable` 接口，否则会报错无法序列化
+```
+org.springframework.data.redis.serializer.SerializationException: Cannot serialize; nested exception is org.springframework.core.serializer.support.SerializationFailedException: Failed to serialize object using DefaultSerializer; nested exception is java.lang.IllegalArgumentException: DefaultSerializer requires a Serializable payload but received an object of type [com.example.lettuce.domain.User]
+```
 
 
 运行结果
