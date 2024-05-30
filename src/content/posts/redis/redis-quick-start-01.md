@@ -2,7 +2,7 @@
 title: Redis 快速开始 - 存储数据结构
 published: 2024-05-27T12:30:00
 description: 'Redis 快速开始 - 存储数据结构'
-image: './assets/Logo-redis.svg'
+image: '/src/assets/images/logo-redis.svg'
 tags: ["Redis", "缓存", "数据库"]
 category: 'Redis'
 draft: false 

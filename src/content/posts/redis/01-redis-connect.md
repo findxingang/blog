@@ -2,7 +2,7 @@
 title: 连接到 Redis
 published: 2024-05-27T12:05:00
 description: '连接到 Redis'
-image: './assets/Logo-redis.svg'
+image: '/src/assets/images/logo-redis.svg'
 tags: ["Redis", "缓存", "数据库"]
 category: 'Redis'
 draft: false 

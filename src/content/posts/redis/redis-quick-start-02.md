@@ -2,7 +2,7 @@
 title: Redis 快速开始 - 使用 Redis 作为文档数据库
 published: 2024-05-27T12:31:00
 description: Redis 快速开始 - 使用 Redis 作为文档数据库
-image: './assets/Logo-redis.svg'
+image: '/src/assets/images/logo-redis.svg'
 tags: [Redis, 缓存, 数据库]
 category: 'Redis'
 draft: false 

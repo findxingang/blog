@@ -1,8 +1,8 @@
 ---
-title: Redis - Redis序列化
+title: Redis - Java 对象序列化为 JSON 字符串
 published: 2024-05-29T11:16:49
 description: ''
-image: ''
+image: '/src/assets/images/logo-redis.svg'
 tags: [Redis, 序列化]
 category: 'Redis'
 draft: false 
@@ -17,7 +17,7 @@ draft: false
 
 
 
-### RedisConfig.java
+### 1. 自定义序列化 RedisConfig.java
 
 ```java
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
@@ -89,3 +89,41 @@ public class RedisConfig {
     }
 }
 ```
+
+
+
+### 2. 默认的序列化方式 JDK
+
+> 即没有 RedisConfig.java
+> <br>
+> 也可以完成 Java 对象的序列化和反序列化，但是从 Redis 可视化工具查看时不够友好
+
+```java
+    /**
+     * RedisTemplate 默认的序列化：JDK
+     */
+    @Test
+    public void testRedisTemplateJDK() {
+        User user = new User();
+        user.setId("1");
+        user.setName("lisi");
+        user.setAge("22");
+        user.setBirthday(LocalDateTime.now());
+
+        redisTemplate.opsForValue().set("crhms:dev:lisi", user);
+        User user1 = (User) redisTemplate.opsForValue().get("crhms:dev:lisi");
+        log.info("user: {}", user1);
+    }
+```
+
+**注意**：`User` 类需要实现 `Serializable` 接口，否则会报错无法序列化
+
+
+运行结果
+```
+2024-05-30 13:18:03.440  INFO 45724 --- [           main] c.e.lettuce.LettuceApplicationTests      : user: User(id=1, name=lisi, age=22, birthday=2024-05-30T13:18:00.935)
+```
+
+Redis 可视化工具中查看：
+
+![redis-02](src/assets/images/redis-02.png)
