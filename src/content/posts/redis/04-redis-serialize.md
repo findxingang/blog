@@ -1,21 +1,18 @@
 ---
 title: Redis - Java 对象序列化为 JSON 字符串
 published: 2024-05-29T11:16:49
-description: ''
-image: '/src/assets/images/logo-redis.svg'
+description: ""
+image: "/src/assets/images/redis/logo-redis.svg"
 tags: [Redis, 序列化]
-category: 'Redis'
-draft: false 
+category: "Redis"
+draft: false
 ---
 
 **Refrences**:
 
-[redis序列化及各种序列化情况划分](https://www.jb51.net/article/280606.htm)
+[redis 序列化及各种序列化情况划分](https://www.jb51.net/article/280606.htm)
 
-[Redis序列化存储及日期格式的问题处理](https://www.jb51.net/article/233220.htm)
-
-
-
+[Redis 序列化存储及日期格式的问题处理](https://www.jb51.net/article/233220.htm)
 
 ### 1. 自定义序列化 RedisConfig.java
 
@@ -90,8 +87,6 @@ public class RedisConfig {
 }
 ```
 
-
-
 ### 2. 默认的序列化方式 JDK
 
 > 即没有 RedisConfig.java
@@ -117,16 +112,17 @@ public class RedisConfig {
 ```
 
 **注意**：`User` 类需要实现 `Serializable` 接口，否则会报错无法序列化
+
 ```
 org.springframework.data.redis.serializer.SerializationException: Cannot serialize; nested exception is org.springframework.core.serializer.support.SerializationFailedException: Failed to serialize object using DefaultSerializer; nested exception is java.lang.IllegalArgumentException: DefaultSerializer requires a Serializable payload but received an object of type [com.example.lettuce.domain.User]
 ```
 
-
 运行结果
+
 ```
 2024-05-30 13:18:03.440  INFO 45724 --- [           main] c.e.lettuce.LettuceApplicationTests      : user: User(id=1, name=lisi, age=22, birthday=2024-05-30T13:18:00.935)
 ```
 
 Redis 可视化工具中查看：
 
-![redis-02](src/assets/images/redis-02.png)
+![redis-02](src/assets/images/redis/redis-02.png)

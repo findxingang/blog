@@ -2,7 +2,7 @@
 title: Redis：Hash
 published: 2024-05-27T15:37:28
 description: "Redis数据结构: 哈希"
-image: "/src/assets/images/logo-redis.svg"
+image: "/src/assets/images/redis/logo-redis.svg"
 tags: ["Redis", "缓存", "数据库"]
 category: "Redis"
 draft: false
@@ -38,11 +38,13 @@ public class LettuceApplicationTests {
 ```
 
 控制台输出
+
 ```
 2024-05-30 10:42:59.898  INFO 66076 --- [           main] c.e.lettuce.LettuceApplicationTests      : key: birthdat, value: 2024-05-30T10:42:57.422
 2024-05-30 10:42:59.899  INFO 66076 --- [           main] c.e.lettuce.LettuceApplicationTests      : key: name, value: zhangsan
 2024-05-30 10:42:59.899  INFO 66076 --- [           main] c.e.lettuce.LettuceApplicationTests      : key: age, value: 18
 ```
+
 Redis 可视化工具可以看到
 
-![redis-01](src/assets/images/redis-01.png)
+![redis-01](src/assets/images/redis/redis-01.png)

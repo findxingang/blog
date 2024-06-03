@@ -2,7 +2,7 @@
 title: Redis 概述
 published: 2024-05-27T12:00:00
 description: 'Redis知识点总结'
-image: '/src/assets/images/logo-redis.svg'
+image: '/src/assets/images/redis/logo-redis.svg'
 tags: ["Redis", "缓存", "数据库"]
 category: 'Redis'
 draft: false 
