@@ -4,6 +4,7 @@ on:
   push: # 监听 push 事件
     branches: # 你可以指定分支，只有推送到这些分支时才会触发
       - main
+  workflow_dispatch: # 允许你在 GitHub 上的 Actions 标签中手动触发此“工作流程”
   pull_request:
     types:
       - opened
