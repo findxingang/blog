@@ -1,6 +1,9 @@
 name: CI
 
 on:
+  push:  # 监听 push 事件
+      branches:  # 你可以指定分支，只有推送到这些分支时才会触发
+        - main
   pull_request:
     types:
       - opened
