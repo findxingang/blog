@@ -2,10 +2,10 @@ import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
   website: "https://findxinang.github.io/", // replace this with your deployed domain
-  author: "Sat Naing",
+  author: "xingang",
   profile: "https://satnaing.dev/",
-  desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
-  title: "AstroPaper",
+  desc: "这个人也不知道他能写出什么东西",
+  title: "Home",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
@@ -28,28 +28,28 @@ export const LOGO_IMAGE = {
 export const SOCIALS: SocialObjects = [
   {
     name: "Github",
-    href: "https://github.com/satnaing/astro-paper",
+    href: "https://github.com/findxingang",
     linkTitle: ` ${SITE.title} on Github`,
     active: true,
   },
-  {
-    name: "Facebook",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Facebook`,
-    active: true,
-  },
-  {
-    name: "Instagram",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Instagram`,
-    active: true,
-  },
-  {
-    name: "LinkedIn",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on LinkedIn`,
-    active: true,
-  },
+  // {
+  //   name: "Facebook",
+  //   href: "https://github.com/satnaing/astro-paper",
+  //   linkTitle: `${SITE.title} on Facebook`,
+  //   active: true,
+  // },
+  // {
+  //   name: "Instagram",
+  //   href: "https://github.com/satnaing/astro-paper",
+  //   linkTitle: `${SITE.title} on Instagram`,
+  //   active: true,
+  // },
+  // {
+  //   name: "LinkedIn",
+  //   href: "https://github.com/satnaing/astro-paper",
+  //   linkTitle: `${SITE.title} on LinkedIn`,
+  //   active: true,
+  // },
   {
     name: "Mail",
     href: "mailto:yourmail@gmail.com",
